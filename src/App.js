@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import { PublicClientApplication } from "@azure/msal-browser";
 import { msalConfig, loginRequest } from "./authConfig";
-
-let msalInstance = null;
-if (typeof window !== "undefined") {
-  const msalInstance = new PublicClientApplication(msalConfig);
-}
 
 function App() {
   const [data, setData] = useState({ Naam: "", Email: "", Bericht: "" });
